@@ -106,6 +106,7 @@ function showFunds() {
         metaFund.setAttribute('id','metaFund');
         metaFund.textContent = parseFloat(localStorageFunds[iterador]['meta']).toFixed(2);
 
+        
         // Abrindo fund
         fundBox.addEventListener("click",function(){
             let name = nameFund.textContent;
@@ -199,6 +200,7 @@ btnDeposito.addEventListener('click', () => {
         alert("Informe o Valor")
     } else {
         let saldo = Number(saldoOfFund.textContent);
+        let fund = nameOfFund.textContent;
         saldo += Number(inputValor.value);
         saldoOfFund.innerHTML = saldo;
 
@@ -218,6 +220,7 @@ btnRetirada.addEventListener('click', () => {
         alert("Informe o Valor")
     } else {
         let saldo = Number(saldoOfFund.textContent);
+        let fund = nameOfFund.textContent;
         saldo -= Number(inputValor.value);
         saldoOfFund.innerHTML = saldo;
     
