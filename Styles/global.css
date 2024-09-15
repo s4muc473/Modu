@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+}
+
+:root {
+    --color-main: #E3B505;
+    --color-sec: #dadacfc7;
+    --color-ter: #fff;
+    --color-font: #000;
+}
+
+.centralize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.loading label {
+    font-size: 24px;
+}
+
+input, button {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+
+.clear {
+    background: transparent;
+    border: none;
+}
+
+.solid {
+    background-color: var(--color-main);
+    color: var(--color-font);
+    border: none;
+}
+
+.outline {
+    background: transparent;
+    color: var(--color-font);
+    border: 1px solid var(--color-font);
+}
+
+.error {
+    color: var(--color-error);
+    display: none;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+button[disabled] {
+    opacity: 0.7;
+}

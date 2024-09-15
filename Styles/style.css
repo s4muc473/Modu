@@ -1,0 +1,332 @@
+* {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* 04A777 dadacfc7*/
+:root {
+    --color-main: #E3B505;
+    --color-sec: #dadacfc7;
+    --color-ter: #fff;
+    --color-font: #000;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+
+.container-parent {
+    width: 100%;
+    height: 84vh;
+    margin-top: 16vh;
+    padding: 5%;
+    color: var(--color-font);
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: var(--color-main);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2%;
+    border-radius: 0;
+}
+
+header .navbar {
+    padding: 1.5%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2vh;
+    color: var(--color-font);
+}
+
+header .navbar a:active {
+    color: var(--color-ter);
+}
+
+header .name {
+    padding-left: 1.5%;
+}
+
+.btn-basic {
+    width: 100%;
+    padding: 2%;
+    border-radius: 10px;
+    margin-top: 2vh;
+}
+
+.divBtnFund {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* ------------------------------------------------------------------------- */
+
+.divBtnFund button {
+    padding: 2%;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    width: 50%;
+    margin-top: 1vh;
+}
+
+.div-menu-add-fund {
+    margin-top: 2vh;
+    width: 100%;
+}
+
+.menu-add-fund {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2vh;
+}
+
+.menu-add-fund button {
+    width: 33%;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.input-basic {
+    width: 100%;
+    margin-top: 1vh;
+    display: inline-block;
+    padding: 2%;
+    background-color: var(--color-sec);
+    padding-left: 2%;
+    border-radius: 10px;
+    color: var(--color-font);
+    caret-color: var(--color-font);
+}
+
+.fundBox, .fundBox-use {
+    width: 100%;
+    background-color: var(--color-sec);
+    margin-top: 1vh;
+    color: var(--color-font);
+    border-radius: 5px;
+    padding: 2%;
+    height: auto;
+    word-wrap: break-word;
+}
+
+.fundBox #nameFund {
+    font-weight: 700;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    color: var(--color-main);
+}
+
+#nameOfFund {
+    font-weight: 700;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    color: var(--color-main);
+}
+
+.fundBox #saldoFund {
+    font-size: 2.5rem;
+    display: inline-block;
+}
+
+#saldoOfFund {
+    font-size: 2rem;
+}
+
+.fundBox #metaFund {
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+#metaOfFund {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.container-fund {
+    margin: auto;
+    margin-top: 22vh;
+    width: 90%;
+}
+
+.container-fund #nameOfFund {
+    font-weight: 600;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    color: var(--color-main);
+}
+
+.container-fund #saldoOfFund {
+    font-size: 2rem;
+}
+
+.container-fund .section-controls {
+    margin-top: 2vh;
+    width: 100%;
+}
+
+.container-fund .section-controls .input-section-controls {
+    margin-top: 1vh;
+    display: inline-block;
+    padding: 1%;
+    background-color: var(--color-sec);
+    padding-left: 2%;
+    border-radius: 10px;
+    color: var(--color-font);
+    caret-color: var(--color-font);
+}
+
+.container-fund .section-controls #input-movimento-motivo {
+    width: 70%;
+}
+
+.container-fund .section-controls #input-movimento-valor {
+    width: 28%;
+}
+
+.container-fund .input-container-main::placeholder {
+    color: var(--color-font);
+}
+
+.container-fund .section-controls .btn-section-controls {
+    margin-top: 1vh;
+    width: 49.04%;
+    padding: 2%;
+    border-radius: 10px;
+    background-color: var(--color-main);
+}
+
+.section-history {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    height: 60vh;
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.section-anotations {
+    margin-top: 2vh;
+    width: 100%;
+}
+
+.btn-section-anotations:active {
+    background-color: #000;
+    color: var(--color-font);
+}
+
+.anotations {
+    width: 100%;
+    height: 50vh;
+    padding: 2%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.content {
+    margin-top: 1vh;
+    width: 100%;
+    border-radius: 10px;
+    padding: 3%;
+    overflow: hidden;
+}
+
+.content #nameFundOfMoviment {
+    width: 83%;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+.content #dateOfMoviment {
+    font-weight: 700;
+    display: inline-block;
+    width: 10%;
+}
+
+.content #valorOfMoviment {
+    font-size: 2rem;
+    display: inline-block;
+    color: var(--color-font);
+}
+
+.content #causeMoviment {
+    width: 90%;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.container-perfil {
+    margin-top: 18vh;
+    position: fixed;
+    width: 100%;
+    padding: 3%;
+}
+
+.container-perfil .data-usuario {
+    margin-top: 1vh;
+    background-color: var(--color-main);
+    height: auto;
+    padding: 3%;
+    border-radius: 10px;
+    border: 2px solid var(--color-main);
+}
+
+.data-usuario #input-name-usuario {
+    background-color: var(--color-main);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.data-usuario .btn-edit-profile {
+    width: 100%;
+    padding: 0.5%;
+    border-radius: 8px;
+    margin-top: 5vh;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--color-ter);
+}
+
+.section-finance-date {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 3vh;
+    background-color: var(--color-sec);
+    border-radius: 10px;
+    padding: 3%;
+}
+
+.section-finance-date .date-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 5vh;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.container-perfil #btn-delete {
+    width: 95%;
+    padding: 2%;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 1vh;
+}
