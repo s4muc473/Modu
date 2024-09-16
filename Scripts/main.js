@@ -48,6 +48,7 @@ const inputValor = document.querySelector("#input-movimento-valor");
 const btnDeposito = document.querySelector("#btn-deposito");
 const btnRetirada = document.querySelector("#btn-retirar");
 const btnVoltar = document.querySelector("#btn-voltar");
+const btnDeletarFundo = document.querySelector("#btn-delete-fund");
 
 // Chaves de acesso do localDtorage
 const localStorageFundsKey = "funds";
@@ -143,7 +144,6 @@ function showFunds() {
         saldoFundBox.appendChild(saldoFund)
         fundBox.appendChild(metaFundBox);
         metaFundBox.appendChild(metaFund);
-        fundBox.appendChild(btnRemoveFund);
     }
 }
 
@@ -238,6 +238,18 @@ btnRetirada.addEventListener('click', () => {
 // Fechando fund
 btnVoltar.addEventListener("click",() => {
     newFund("use");
+});
+
+btnDeletarFundo.addEventListener("click",function(){
+    let fund = nameOfFund.textContent;
+
+    cards = cards.filter(function(name){
+        return name['fundo'] !== fund;
+    });
+
+    localStorage.setItem("cards", JSON.stringify(cards));
+
+    removeFund(fund);
 });
 
 // Sistema de Datas - Pegando a data atual
