@@ -16,100 +16,19 @@
 </head>
 
 <!--                   
-   _____        __           
-   \_   \_ __  / _|_ __ __ _ 
-    / /\/ '_ \| |_| '__/ _` |
-/\/ /_ | | | |  _| | | (_| |
-\____/ |_| |_|_| |_|  \__,_|
-                            
-                                    -->
+███████╗███████╗███████╗██████╗ ████████╗███████╗ ██████╗██╗  ██╗
+██╔════╝██╔════╝██╔════╝██╔══██╗╚══██╔══╝██╔════╝██╔════╝██║  ██║
+███████╗█████╗  █████╗  ██║  ██║   ██║   █████╗  ██║     ███████║
+╚════██║██╔══╝  ██╔══╝  ██║  ██║   ██║   ██╔══╝  ██║     ██╔══██║
+███████║███████╗███████╗██████╔╝   ██║   ███████╗╚██████╗██║  ██║
+╚══════╝╚══════╝╚══════╝╚═════╝    ╚═╝   ╚══════╝ ╚═════╝╚═╝  ╚═╝
+-->
 
 <body>    
-    <header>
-        <nav class="navbar">
-            <a onclick="openContainerPerfil()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                </svg>
-            </a>
-            <a onclick="openContainerPlus()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
-                </svg>
-            </a>
-        </nav>
-
-        <div class="name">
-            <h3>Olá <p style="display: inline-block;" id="name-usuario"></p>.</h3>
-        </div>
-    </header>
-
-    <!-- CONTAINER PRINCIPAL -->
-    <div class="container-parent " style="display: block;">
-
-        <div class="section-funds" style="display: block">
-            <button id="btn-new-fund" class="btn-basic">Novo Fundo</button>
-            <div class="local-funds">
-                <!-- Local de carregamento inicial dos funds -->
-            </div>
-        </div>
-
-        <div class="section-new-fund" style="display: none;">
-            <input type="text" id="input-name-fund" class="input-basic" placeholder="Nome do fundo">
-            <input type="text" id="input-description-fund" class="input-basic" placeholder="breve descrição do fundo">
-            <input type="number" id="input-meta-fund" class="input-basic" placeholder="Meta do fundo">
-            <button id="btn-add-fund" class="btn-basic">Adicionar</button>
-        </div>
-
-        <div class="section-history">
-        
-        </div>
-
-        <div class="section-anotations">
-            <textarea class="anotations" placeholder="Crie anotações e planos..."></textarea>
-        </div>
-
-    </div>
-
-
-    <!-- Conainer do Fund -->
-    <div class="container-fund" style="display: none;">
-
-        <div class="fundBox-use">
-            <p id="nameOfFund"></p>
-            <h3>R$ <p style="display: inline-block;" id="saldoOfFund"></p></h3>
-            <h5>R$ <p style="display: inline-block;" id="metaOfFund"></p></h5>
-        </div>
-
-        <div class="section-controls">
-            <input type="text"  class="input-section-controls" id="input-movimento-motivo" placeholder="Informe o motivo">
-            <input type="number" class="input-section-controls" id="input-movimento-valor" placeholder="valor">
-            <button class="btn-section-controls" id="btn-retirar">Retirar</button>
-            <button class="btn-section-controls" id="btn-deposito">Depositar</button>
-            <button class="btn-basic" id="btn-voltar">Voltar</button>
-            <button class="btn-basic" id="btn-delete-fund">Deletar Fundo</button>
-        </div> 
-
-        <div>
-            <p  id="description-fund-open"></p>
-        </div>
-    </div>
-
-    <!-- Container do Perfil -->
-    <div class="container-perfil" style="display: none;">
-        <div class="data-usuario">
-            <input type="text" id="input-name-usuario">
-            <button id="btn-edit-profile" class="btn-edit-profile">Editar Usuario</button>
-            <button id="btn-save-data-profile" class="btn-edit-profile" style="display: none;">Editar Usuario</button>
-        </div>
-        
-        <div class="section-finance-date">
-            <div class="date-box" id="box-of-prohibited" style="background-color: #A7CECB;"></div>
-            <div class="date-box" id="box-of-balance" style="background-color: #dadacfc7;"></div>
-            <div class="date-box" id="box-of-exit" style="background-color: #FFA0AC;"></div>
-        </div>
-        <button id="btn-delete">Deletar dados</button>
-    </div>
+    <script>
+        window.addEventListener("load",function(){
+            window.location.href="/Pages/login.html";
+        });
+    </script>
 </body>
 </html>
