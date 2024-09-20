@@ -23,6 +23,7 @@ const containerPerfil = document.querySelector(".container-perfil");
 const sectionControls = document.querySelector(".section-controls");
 const sectionFunds = document.querySelector(".section-funds");
 
+
 // Carregando informações do usuario e sistemas iniciais
 const nameUsuario = document.querySelector("#name-usuario");
 window.addEventListener('load', () => {
