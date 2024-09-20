@@ -15,6 +15,7 @@ const localFunds = document.querySelector(".local-funds");
 // Caixa do Fund
 const containerFund = document.querySelector(".container-fund")
 // Elementos de Criação do Fund
+const sectionNewFund = document.querySelector(".section-new-fund");
 const btnNewFund = document.querySelector("#btn-new-fund");
 const inputNameFund = document.querySelector("#input-name-fund");
 const inputMetaFund = document.querySelector("#input-meta-fund");
@@ -115,8 +116,7 @@ function removeFund(name) {
     let index = localStorageFunds.findIndex(x => x.name == name);
     localStorageFunds.splice(index, 1);
     localStorage.setItem(localStorageFundsKey, JSON.stringify(localStorageFunds));
-    showFunds();
-}
+};
 
 // Crindo novo fundo
 function newFund(use) {
