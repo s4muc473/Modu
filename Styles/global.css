@@ -74,7 +74,7 @@ button[disabled] {
     height: 60px;   
     position: fixed;
     left: 75%;
-    top: 78vh;
+    top: 75vh;
     background-color: var(--color-main);
     font-size: 20px;
 }

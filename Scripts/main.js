@@ -21,7 +21,7 @@ function logout() {
 const containerParent = document.querySelector(".container-parent");
 const containerPerfil = document.querySelector(".container-perfil");
 const sectionControls = document.querySelector(".section-controls");
-const sectionFunds = document.querySelector(".section-funds");
+
 
 
 // Carregando informações do usuario e sistemas iniciais

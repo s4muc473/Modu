@@ -159,9 +159,19 @@ header .name {
     display: inline-block;
 }
 
+.fundBox #descricaoFund {
+    color: transparent;
+    background-color: transparent;
+    height: 0;
+}
+
 #metaOfFund {
     font-weight: 600;
     font-size: 0.9rem;
+}
+
+#descricaoOfFund {
+    width: 80%;
 }
 
 .container-fund {
@@ -196,6 +206,10 @@ header .name {
     border-radius: 10px;
     color: var(--color-font);
     caret-color: var(--color-font);
+}
+
+#input-description-fund {
+    height: 80px;
 }
 
 .container-fund .section-controls #input-movimento-motivo {
