@@ -147,7 +147,7 @@ function newFund(use) {
             nameFund = nameOfFund.textContent;
             metaFund = metaOfFund.textContent;
             saldoFund = saldoOfFund.textContent;
-            descricaoFund = descricaoOfFund.textContent
+            descricaoFund = descricaoOfFund.value;
         }
         // Salvando dados do fund
         localStorageFunds.unshift({
