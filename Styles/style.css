@@ -171,7 +171,9 @@ header .name {
 }
 
 #descricaoOfFund {
-    width: 80%;
+    width: 100%;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
 }
 
 .container-fund {
