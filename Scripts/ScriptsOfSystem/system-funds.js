@@ -193,11 +193,12 @@ btnRetirada.addEventListener('click', () => {
 
 // Fechando fund
 btnVoltar.addEventListener("click",() => {
+    let fund = nameOfFund.textContent;
+    removeFund(fund);
     newFund("use");
 });
 
 btnDeletarFundo.addEventListener("click",function(){
-    let fund = nameOfFund.textContent;
 
     cards = cards.filter(function(name){
         return name['fundo'] !== fund;

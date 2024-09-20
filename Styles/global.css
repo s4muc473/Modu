@@ -9,6 +9,11 @@ body {
     --color-font: #000;
 }
 
+a {
+    text-decoration: none;
+    color: var(--color-font);
+}
+
 .centralize {
     display: flex;
     justify-content: center;
@@ -61,4 +66,15 @@ button:active {
 
 button[disabled] {
     opacity: 0.7;
+}
+
+.btn-ball-add {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    left: 80%;
+    top: 85vh;
+    background-color: var(--color-main);
+    font-size: 16px;
 }
