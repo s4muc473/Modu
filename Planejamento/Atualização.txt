@@ -6,11 +6,10 @@ NOVOS RECURSOS
 
 NOVAS FUNÇÕES DO SISTEMA
 - Criação de novos tipos de fundos (A receber,Dividas) -> area propria
-- Adição de descrição nos fundos
-- Melhoria e novos dados na area de movimentação -> area propria
+X Adição de descrição nos fundos 
+X Melhoria e novos dados na area de movimentação -> area propria
 - Melhoria e novos recursos nas estastisticas 
 - Melhoria na area do usuario
-- Melhoria e novos recursos nas anotações
 
 CORREÇÕES DE BUGS
 x Bugs de exclusão/n de dados 

@@ -20,6 +20,11 @@ function saveMoviment() {
     localStorage.setItem("cards", JSON.stringify(cards));
 }
 
+function deleteExtracts() {
+    localStorage.cards = [];
+    location.reload();
+}
+
 // Carregando movimentação no historico
 function showMoviment() {
     if (cards == '' || cards == 'undefined') {

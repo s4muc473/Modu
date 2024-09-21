@@ -37,6 +37,13 @@ input, button {
     width: 300px;
 }
 
+.btn-basic {
+    width: 100%;
+    padding: 2%;
+    border-radius: 10px;
+    margin-top: 1vh;
+}
+
 
 .clear {
     background: transparent;

@@ -120,7 +120,7 @@ function openFundBox(name,saldo,meta,descricao) {
     nameOfFund.textContent = name;
     saldoOfFund.textContent = parseFloat(saldo).toFixed(2);
     metaOfFund.textContent = meta;
-    descricaoOfFund.textContent = descricao;
+    descricaoOfFund.value = descricao;
 }
 
 // F: excluindo fundo

@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyCtS94b-N1Wf0-Kv6nFUNvsW6id4ePDMoY",
-    authDomain: "modumoney-da6c6.firebaseapp.com",
-    projectId: "modumoney-da6c6",
-    storageBucket: "modumoney-da6c6.appspot.com",
-    messagingSenderId: "28309207622",
-    appId: "1:28309207622:web:acdeec4e5bc4350c892847",
-    measurementId: "G-NE186M06L4"
+    apiKey: "AIzaSyAVtWNdpKl75tcLLrL12vy473GUhz0vZIU",
+    authDomain: "modumoney-894b5.firebaseapp.com",
+    projectId: "modumoney-894b5",
+    storageBucket: "modumoney-894b5.appspot.com",
+    messagingSenderId: "384550003416",
+    appId: "1:384550003416:web:3476720a74ce1b8a55adad",
+    measurementId: "G-6K6QCF44MZ"
 };
 firebase.initializeApp(firebaseConfig);
