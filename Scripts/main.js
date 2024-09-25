@@ -35,7 +35,6 @@ window.addEventListener('load', () => {
             nameUsuario.innerHTML = localStorage.usuario;
         } else {
             localStorage.usuario = "Usuario.";
-            nameUsuario.innerHTML = localStorage.usuario;
             window.location.href="/Pages/login.html";
         }
 });
