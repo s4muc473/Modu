@@ -22,20 +22,11 @@ body {
 }
 
 .type-logo {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
-    padding: 2%;
+    position: relative;
+    padding: 3%;
     color: var(--color-main);
     bottom: 24vh;
     right: 20%;
-}
-
-.type-logo p {
-    color: var(--color-font);
 }
 
 input {

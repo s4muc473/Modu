@@ -4,7 +4,6 @@ firebase.auth().onAuthStateChanged(function(user){
     }
 })
 
-
 function onchangeEmail() {
     toggleButtonsDisabled();
     toggleEmailErrors();
@@ -17,6 +16,8 @@ function onchangePassword() {
 
 function login() {
     showLoading();
+    window.location.href = "home.html";
+
     firebase.auth().signInWithEmailAndPassword(form.email().value,form.password().value).then(response => {
         hideLoading();
         window.location.href = "home.html";
@@ -39,9 +40,9 @@ function register() {
 
 function recoverPassword() {
     showLoading();
+    hideLoading();
     firebase.auth().sendPasswordResetEmail(form.email().value).then(()=>{
         hideLoading();
-
     }).catch(error => {
         hideLoading();
     })

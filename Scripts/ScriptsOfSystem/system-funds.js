@@ -1,5 +1,4 @@
 // Elementos da SectionFunds
-const sectionFunds = document.querySelector(".section-funds");
 
 const inputMotivo = document.querySelector("#input-movimento-motivo");
 const inputValor = document.querySelector("#input-movimento-valor");

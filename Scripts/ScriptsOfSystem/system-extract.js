@@ -1,5 +1,4 @@
 // SISTEMA DE MOVIMENTAÇÕES
-const sectionHistory = document.querySelector(".section-history");
 
 // Acessando cards de movimento na localStorage
 let cards = JSON.parse(localStorage.getItem("cards") || "[]").reverse();
