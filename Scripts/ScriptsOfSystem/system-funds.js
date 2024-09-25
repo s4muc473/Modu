@@ -35,6 +35,7 @@ const sectionEditFund = document.querySelector(".section-edit-fund");
 const inputnameEditFund = document.querySelector("#input-name-edit-fund");
 const inputMetaEditFund = document.querySelector("#input-meta-edit-fund"); 
 const inputDescricaoEditFund = document.querySelector("#input-description-edit-fund");
+const inputValorEditFund = document.querySelector("#input-edit-value-fund");
 const btnEditFund = document.querySelector("#btn-edit-fund");
 
 // Abrindo a caixa de criaçao de fund
@@ -132,12 +133,14 @@ function openFundBox(name,saldo,meta,descricao) {
     inputnameEditFund.value = nameOfFund.textContent;
     inputMetaEditFund.value = metaOfFund.textContent;
     inputDescricaoEditFund.value = descricaoOfFund.value;
+    inputValorEditFund.value = parseFloat(saldo).toFixed(2);
 }
 
 function editFund() {
     nameOfFund.textContent = inputnameEditFund.value;
     metaOfFund.textContent = inputMetaEditFund.value;
     descricaoOfFund.value = inputDescricaoEditFund.value;
+    saldoOfFund.textContent = inputValorEditFund.value;
 }
 
 btnEditFund.addEventListener("click",function(){
