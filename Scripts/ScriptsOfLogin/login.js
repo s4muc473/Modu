@@ -1,8 +1,8 @@
 firebase.auth().onAuthStateChanged(function(user){
     if (user) {
-        window.location.href="/Pages/home.html";
+        window.location.href="home.html";
     }
-})
+});
 
 function onchangeEmail() {
     toggleButtonsDisabled();

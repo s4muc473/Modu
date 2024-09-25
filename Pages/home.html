@@ -59,9 +59,16 @@
     <div class="container-fund" style="display: none;">
 
         <div class="fundBox-use">
-            <p id="nameOfFund"></p>
-            <h3>R$ <p style="display: inline-block;" id="saldoOfFund"></p></h3>
-            <h5>R$ <p style="display: inline-block;" id="metaOfFund"></p></h5>
+            <div>
+                <p id="nameOfFund"></p>
+                <h3>R$ <p style="display: inline-block;" id="saldoOfFund"></p></h3>
+                <h5>R$ <p style="display: inline-block;" id="metaOfFund"></p></h5>
+            </div>
+            <div>
+                <a id="btnOpenEditBox">
+                    <i class="fa-solid fa-pen"></i>
+                </a>
+            </div>
         </div>
 
         <div class="section-controls">
@@ -74,6 +81,13 @@
 
             <button class="btn-basic" id="btn-delete-fund">Deletar Fundo</button>
         </div> 
+        
+        <div class="section-edit-fund" style="display: none;">
+            <input type="text" id="input-name-edit-fund" class="input-basic">
+            <textarea type="text" id="input-description-edit-fund" class="input-basic"></textarea>
+            <input type="number" id="input-meta-edit-fund" class="input-basic">
+            <button id="btn-edit-fund" class="btn-basic">Editar</button>
+        </div>
     </div>
 
     <!-- Container do Perfil -->

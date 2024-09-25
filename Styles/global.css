@@ -73,3 +73,7 @@ button[disabled] {
     background-color: var(--color-main);
     font-size: 20px;
 }
+
+a {
+    color: var(--color-font);
+}

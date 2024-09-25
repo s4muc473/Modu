@@ -28,6 +28,14 @@ let saldoOfFund = document.querySelector("#saldoOfFund");
 let nameOfFund = document.querySelector("#nameOfFund");
 let metaOfFund = document.querySelector("#metaOfFund");
 let descricaoOfFund = document.querySelector("#descricaoOfFund");
+let btnOpenEditBox = document.querySelector("#btnOpenEditBox");
+
+const sectionEditFund = document.querySelector(".section-edit-fund");
+
+const inputnameEditFund = document.querySelector("#input-name-edit-fund");
+const inputMetaEditFund = document.querySelector("#input-meta-edit-fund"); 
+const inputDescricaoEditFund = document.querySelector("#input-description-edit-fund");
+const btnEditFund = document.querySelector("#btn-edit-fund");
 
 // Abrindo a caixa de criaçao de fund
 btnNewFund.addEventListener("click",function(){
@@ -120,7 +128,29 @@ function openFundBox(name,saldo,meta,descricao) {
     saldoOfFund.textContent = parseFloat(saldo).toFixed(2);
     metaOfFund.textContent = meta;
     descricaoOfFund.value = descricao;
+
+    inputnameEditFund.value = nameOfFund.textContent;
+    inputMetaEditFund.value = metaOfFund.textContent;
+    inputDescricaoEditFund.value = descricaoOfFund.value;
 }
+
+function editFund() {
+    nameOfFund.textContent = inputnameEditFund.value;
+    metaOfFund.textContent = inputMetaEditFund.value;
+    descricaoOfFund.value = inputDescricaoEditFund.value;
+}
+
+btnEditFund.addEventListener("click",function(){
+    editFund();
+    let fund = nameOfFund.textContent;
+    removeFund(fund);
+    newFund("use");
+    sectionEditFund.style.display = "none";
+});
+
+btnOpenEditBox.addEventListener("click",function(){
+    sectionEditFund.style.display = "block";
+});
 
 // F: excluindo fundo
 function removeFund(name) {
@@ -181,8 +211,8 @@ btnDeposito.addEventListener('click', () => {
         let tipo = "#E3B505";
         localStorage.tipo = tipo;
 
-        inputValor.innerHTML = "";
-        inputMotivo.innerHTML = "";
+        inputValor.value = "";
+        inputMotivo.value = "";
 
         saveMoviment();
     }
@@ -204,8 +234,8 @@ btnRetirada.addEventListener('click', () => {
         let tipo = "#dadacfc7";
         localStorage.tipo = tipo;
 
-        inputValor.innerHTML = "";
-        inputMotivo.innerHTML = "";
+        inputValor.value = "";
+        inputMotivo.value = "";
 
         saveMoviment();
     }
