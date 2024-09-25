@@ -28,6 +28,8 @@ const sectionFunds = document.querySelector(".section-funds");
 const nameUsuario = document.querySelector("#name-usuario");
 window.addEventListener('load', () => {
         // MAIN ENGINE
+        showFunds();
+        showFinanceDates();
         
         if (localStorage.usuario) {
             nameUsuario.innerHTML = localStorage.usuario;
