@@ -1,7 +1,7 @@
 // SISTEMA DE MOVIMENTAÇÕES
 
 // Acessando cards de movimento na localStorage
-let cards = JSON.parse(localStorage.getItem("cards") || "[]").reverse();
+let cards = JSON.parse(localStorage.getItem("cards") || "[]");
 
 window.addEventListener("load",function(){
     showMoviment();
