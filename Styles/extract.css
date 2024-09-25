@@ -28,7 +28,8 @@ header {
 header nav {
     padding: 1.5%;
     display: flex;
-    font-size: 16px;
+    font-size: 18px;
+    width: 20%;
     justify-content: space-between;
     margin-bottom: 2vh;
     color: var(--color-font);

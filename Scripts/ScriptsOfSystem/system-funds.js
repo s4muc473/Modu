@@ -211,10 +211,11 @@ btnDeposito.addEventListener('click', () => {
         let tipo = "#E3B505";
         localStorage.tipo = tipo;
 
+        
+        saveMoviment();
+        
         inputValor.value = "";
         inputMotivo.value = "";
-
-        saveMoviment();
     }
 });
 
@@ -234,10 +235,11 @@ btnRetirada.addEventListener('click', () => {
         let tipo = "#dadacfc7";
         localStorage.tipo = tipo;
 
+        
+        saveMoviment();
+
         inputValor.value = "";
         inputMotivo.value = "";
-
-        saveMoviment();
     }
 });
 
