@@ -138,9 +138,9 @@ function openFundBox(name,saldo,meta,descricao) {
 
 function editFund() {
     nameOfFund.textContent = inputnameEditFund.value;
+    saldoOfFund.textContent = inputValorEditFund.value;
     metaOfFund.textContent = inputMetaEditFund.value;
     descricaoOfFund.value = inputDescricaoEditFund.value;
-    saldoOfFund.textContent = inputValorEditFund.value;
 }
 
 btnEditFund.addEventListener("click",function(){

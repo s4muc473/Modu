@@ -57,6 +57,11 @@
 
     <!-- Conainer do Fund -->
     <div class="container-fund" style="display: none;">
+        <nav>
+            <a id="btn-voltar">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+        </nav>
 
         <div class="fundBox-use">
             <div>
@@ -77,12 +82,14 @@
             <button class="btn-section-controls" id="btn-retirar">Retirar</button>
             <button class="btn-section-controls" id="btn-deposito">Depositar</button>
             <textarea id="descricaoOfFund" placeholder="Digite a descrição do Fundo"></textarea>
-            <button class="btn-basic" id="btn-voltar">Voltar</button>
-
-            <button class="btn-basic" id="btn-delete-fund">Deletar Fundo</button>
         </div> 
         
         <div class="section-edit-fund" style="display: none;">
+            <nav>
+                <a id="btn-delete-fund">
+                    <i class="fa-solid fa-trash"></i>
+                </a>
+            </nav>
             <input type="text" id="input-name-edit-fund" class="input-basic">
             <textarea type="text" id="input-description-edit-fund" class="input-basic"></textarea>
             <input type="number" id="input-meta-edit-fund" class="input-basic">
