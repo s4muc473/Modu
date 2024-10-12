@@ -34,19 +34,31 @@
                 <p>Saldo</p>
                 <h1>R$ <p style="display: inline-block;" id="saldo"></p>0,00</h1>
                 <div>
-                    <a>Distribuição em Metas</a>
+                    <button>Distribuição em Metas</button>
                 </div>
             </div>
             
             <div class="boxOfButtons">
-                <button><i class="fa-solid fa-arrow-trend-up"></i></button>
-                <button><i class="fa-solid fa-arrow-trend-down"></i></button>
+                <button onclick="income()"><i class="fa-solid fa-arrow-trend-up"></i></button>
+                <button onclick="expense()"><i class="fa-solid fa-arrow-trend-down"></i></button>
                 <button onclick="acessExtracts()"><i class="fa-solid fa-money-bill-transfer"></i></button>
                 <button onclick="acessFunds()"><i class="fa-solid fa-sack-dollar"></i></button>
             </div>
 
             <div class="boxOfStatistics">
                 Estastisticas em Breve aqui!. <br> [Tupy Projects]
+            </div>
+
+            <div class="divIncome divTransfer">
+                <input type="number" placeholder="Valor">
+                <input type="text" placeholder="Causa da Entrada">
+                <button>Pronto</button>
+            </div>
+
+            <div class="divExpense divTransfer">
+                <input type="number" placeholder="Valor">
+                <input type="text" placeholder="Causa da Saida">
+                <button>Pronto</button>
             </div>
         </main>
         

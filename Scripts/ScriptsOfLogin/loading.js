@@ -17,3 +17,14 @@ function hideLoading() {
         loadings[0].remove();
     }
 }
+
+function showScreenBlack() {
+    const div = document.createElement("div");
+    div.classList.add("loading","centralize")
+
+    const label = document.createElement("label");
+    label.innerText = "Carregando...";
+    div.appendChild(label);
+
+    document.body.appendChild(div);
+}

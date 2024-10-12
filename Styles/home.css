@@ -38,8 +38,13 @@ main {
 .boxOfSaldo div {
     position: absolute;
     bottom: 5%;    
-    background-color: var(--color-ter);
     width: 85%;
+    border-radius: 10px;
+}
+
+.boxOfSaldo button {
+    background-color: var(--color-main);
+    width: 100%;
     padding: 2%;
     border-radius: 10px;
     text-align: center;
@@ -72,4 +77,39 @@ main {
     text-align: center;
     align-items: center;
     justify-content: center;
+}
+
+.divTransfer {
+    position: fixed;
+    z-index: 1; 
+    left: 5%;
+    top: 30vh;
+    width: 90%; 
+    height: auto; 
+    padding: 2%;
+    display: none;
+    border-radius: 10px;
+    background-color: var(--color-sec);
+    justify-content: center; 
+    align-items: center; 
+    transition: 0.5s ease-in-out;
+}
+
+.divTransfer input {
+    width: 100%;
+    margin-top: 1vh;
+    display: inline-block;
+    padding: 2%;
+    background-color: var(--color-ter);
+    padding-left: 2%;
+    border-radius: 10px;
+    color: var(--color-font);
+    caret-color: var(--color-font);
+}
+
+.divTransfer button {
+    width: 100%;
+    padding: 2%;
+    border-radius: 10px;
+    margin-top: 1vh;
 }
