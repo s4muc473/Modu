@@ -78,12 +78,8 @@ button[disabled] {
     font-size: 20px;
 }
 
-a {
-    color: var(--color-font);
-}
 
 header {
-    background-color: var(--color-main);
     position: fixed;
     top: 0;
     width: 100%;
@@ -94,6 +90,7 @@ header {
 
 header i {
     font-size: 16px;
+    color: var(--color-main);
 }
 
 header .navbar {
@@ -102,7 +99,6 @@ header .navbar {
     justify-content: space-between;
     width: 100%;
     margin-bottom: 2vh;
-    color: var(--color-font);
 }
 
 header .navbar a:active {
@@ -112,7 +108,7 @@ header .navbar a:active {
 .navbar ul a {
     margin: 4px;
     text-decoration: none;
-    color: var(--color-font);
+    color: var(--color-main);
 }
 
 header .name {
