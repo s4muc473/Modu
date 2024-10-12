@@ -7,6 +7,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+header {
+    font-size: 24px;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -14,19 +18,40 @@ body {
 }
 
 main {
+    display: flex;
     padding: 15vh 5%;
     width: 100%;
-    display: flex;
+    height: 100vh;
     justify-content: left;
     flex-direction: column;
+    overflow: hidden;
+}
+
+.boxOfSaldo {
+    position: relative;
+    background-color: var(--color-sec);
+    padding: 8%;
+    border-radius: 10px;
+    height: 200px;
+}
+
+.boxOfSaldo div {
+    position: absolute;
+    bottom: 5%;    
+    background-color: var(--color-ter);
+    width: 85%;
+    padding: 2%;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .boxOfButtons {
     width: 100%;
-    margin-top: 25%;
+    height: 20vh;
+    margin-top: 10%;
     font-size: 48px;
     display: flex;
-    gap: 10%;
+    gap: 7%;
     overflow-y: hidden;
     scroll-behavior: smooth;
 }
@@ -35,4 +60,15 @@ main {
     padding: 10%;
     border-radius: 10px;
     display: inline;
+}
+
+.boxOfStatistics {
+    background-color: var(--color-sec);
+    padding: 8%;
+    border-radius: 10px;
+    height: 200px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
