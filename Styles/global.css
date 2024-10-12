@@ -2,6 +2,10 @@ body {
     margin: 0;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+}
+
 :root {
     --color-main: #E3B505;
     --color-sec: #dadacfc7;
@@ -76,4 +80,60 @@ button[disabled] {
 
 a {
     color: var(--color-font);
+}
+
+header {
+    background-color: var(--color-main);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+header i {
+    font-size: 16px;
+}
+
+header .navbar {
+    padding: 1.5%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2vh;
+    color: var(--color-font);
+}
+
+header .navbar a:active {
+    color: var(--color-ter);
+}
+
+.navbar ul a {
+    margin: 4px;
+    text-decoration: none;
+    color: var(--color-font);
+}
+
+header .name {
+    padding-left: 1.5%;
+}
+
+.btn-basic {
+    width: 100%;
+    padding: 2%;
+    border-radius: 10px;
+    margin-top: 1vh;
+}
+
+.input-basic {
+    width: 100%;
+    margin-top: 1vh;
+    display: inline-block;
+    padding: 2%;
+    background-color: var(--color-sec);
+    padding-left: 2%;
+    border-radius: 10px;
+    color: var(--color-font);
+    caret-color: var(--color-font);
 }

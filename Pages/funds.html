@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Styles/global.css">
+    <link rel="stylesheet" href="/Styles/style.css">
+    <script src="https://kit.fontawesome.com/2ec87f2ee1.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/Styles/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Styles/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Styles/Favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Styles/Favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Styles/Favicon/android-chrome-512x512.png">
+    <title>Modu Funds</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/Pages/home.html"">
+                <i class="fa-solid fa-house"></i>
+            </a>
+
+            <ul>
+                <a href="/Pages/extract.html" onclick="showMoviment();">
+                    <i class="fa-solid fa-money-bill-transfer"></i>
+                </a>
+            </ul>
+        </nav>
+
+        <div class="name">
+            <h3>Minhas Metas <p style="display: inline-block;"></p></h3>
+        </div>
+    </header>
+
+    <!-- CONTAINER PRINCIPAL -->
+    <div class="container-parent " style="display: block;">
+
+        <div class="section-funds" style="display: block">
+            <div class="local-funds">
+                <!-- Local de carregamento inicial dos funds -->
+            </div>
+        </div>
+        
+        <div class="section-new-fund" style="display: none;">
+            <input type="text" id="input-name-fund" class="input-basic" placeholder="Nome do fundo">
+            <textarea type="text" id="input-description-fund" class="input-basic" placeholder="breve descrição do fundo"></textarea>
+            <input type="number" id="input-meta-fund" class="input-basic" placeholder="Meta do fundo">
+            <button id="btn-add-fund" class="btn-basic">Adicionar</button>
+        </div>
+        
+        <button id="btn-new-fund" class="btn-ball-add">+</button>
+    </div>
+
+
+    <!-- Conainer do Fund -->
+    <div class="container-fund" style="display: none;">
+        <nav>
+            <a id="btn-voltar">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+        </nav>
+
+        <div class="fundBox-use">
+            <div>
+                <p id="nameOfFund"></p>
+                <h3>R$ <p style="display: inline-block;" id="saldoOfFund"></p></h3>
+                <h5>R$ <p style="display: inline-block;" id="metaOfFund"></p></h5>
+            </div>
+            <div>
+                <a id="btnOpenEditBox">
+                    <i class="fa-solid fa-pen"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="section-controls">
+            <input type="text"  class="input-section-controls" id="input-movimento-motivo" placeholder="Informe o motivo">
+            <input type="number" class="input-section-controls" id="input-movimento-valor" placeholder="valor">
+            <button class="btn-section-controls" id="btn-retirar">Retirar</button>
+            <button class="btn-section-controls" id="btn-deposito">Depositar</button>
+            <textarea id="descricaoOfFund" placeholder="Digite a descrição do Fundo"></textarea>
+        </div> 
+        
+        <div class="section-edit-fund" style="display: none;">
+            <nav>
+                <a id="btn-delete-fund">
+                    <i class="fa-solid fa-trash"></i>
+                </a>
+            </nav>
+            <input type="text" id="input-name-edit-fund" class="input-basic">
+            <textarea type="text" id="input-description-edit-fund" class="input-basic"></textarea>
+            <input type="number" id="input-meta-edit-fund" class="input-basic">
+            <input type="number" id="input-edit-value-fund" class="input-basic">
+            <button id="btn-edit-fund" class="btn-basic">Editar</button>
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+    <script src="/firebase-init.js"></script>
+    <script src="/Scripts/ScriptsOfLogin/loading.js"></script>
+    
+    <script src="/Scripts/main.js"></script>
+
+    <script src="/Scripts/ScriptsOfSystem/system-extract.js"></script>  
+    <script src="/Scripts/ScriptsOfSystem/system-funds.js"></script>
+    <script src="/Scripts/ScriptsOfSystem/system-user.js"></script>
+    <script src="/Scripts/ScriptsOfSystem/system-date.js"></script>
+    
+</body>
+</html>

@@ -29,50 +29,6 @@
     scroll-behavior: smooth;
 }
 
-header {
-    background-color: var(--color-main);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 2%;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-header i {
-    font-size: 16px;
-}
-
-header .navbar {
-    padding: 1.5%;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 2vh;
-    color: var(--color-font);
-}
-
-header .navbar a:active {
-    color: var(--color-ter);
-}
-
-.navbar ul a {
-    margin: 4px;
-    text-decoration: none;
-    color: var(--color-font);
-}
-
-header .name {
-    padding-left: 1.5%;
-}
-
-.btn-basic {
-    width: 100%;
-    padding: 2%;
-    border-radius: 10px;
-    margin-top: 1vh;
-}
-
 .divBtnFund {
     display: flex;
     justify-content: space-around;
@@ -103,18 +59,6 @@ header .name {
     width: 33%;
     padding: 2%;
     border-radius: 10px;
-}
-
-.input-basic {
-    width: 100%;
-    margin-top: 1vh;
-    display: inline-block;
-    padding: 2%;
-    background-color: var(--color-sec);
-    padding-left: 2%;
-    border-radius: 10px;
-    color: var(--color-font);
-    caret-color: var(--color-font);
 }
 
 .container-fund nav {
@@ -295,64 +239,4 @@ header .name {
 .section-edit-fund #input-description-edit-fund:hover {
     height: 48vh;
     transition: 0.5s ease-in-out;
-}
-
-.container-perfil {
-    margin-top: 18vh;
-    position: fixed;
-    width: 100%;
-    padding: 3%;
-}
-
-.container-perfil .data-usuario {
-    margin-top: 1vh;
-    background-color: var(--color-main);
-    height: auto;
-    padding: 3%;
-    border-radius: 10px;
-    border: 2px solid var(--color-main);
-}
-
-.data-usuario #input-name-usuario {
-    background-color: var(--color-main);
-    font-weight: 700;
-    font-size: 1.3rem;
-}
-
-.data-usuario .btn-edit-profile {
-    width: 100%;
-    padding: 0.5%;
-    border-radius: 8px;
-    margin-top: 5vh;
-    background-color: rgba(0, 0, 0, 0);
-    color: var(--color-ter);
-}
-
-.section-finance-date {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    margin-top: 3vh;
-    background-color: var(--color-sec);
-    border-radius: 10px;
-    padding: 3%;
-}
-
-.section-finance-date .date-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35%;
-    height: 5vh;
-    padding: 2%;
-    border-radius: 10px;
-}
-
-.container-perfil #btn-delete {
-    width: 95%;
-    padding: 2%;
-    border-radius: 10px;
-    position: fixed;
-    bottom: 1vh;
 }
