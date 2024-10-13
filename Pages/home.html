@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +32,7 @@
         <main>
             <div class="boxOfSaldo">
                 <p>Saldo</p>
-                <h1>R$ <p style="display: inline-block;" id="saldo"></p>0,00</h1>
+                <h1><p style="display: inline-block;font-size: 20px;">R$</p> <p style="display: inline-block;" id="saldo"></p></h1>
                 <div>
                     <button>Distribuição em Metas</button>
                 </div>
@@ -50,15 +50,15 @@
             </div>
 
             <div class="divIncome divTransfer">
-                <input type="number" placeholder="Valor">
-                <input type="text" placeholder="Causa da Entrada">
-                <button>Pronto</button>
+                <input type="text" placeholder="Valor" id="input-income">
+                <input type="text" placeholder="Causa da Entrada" id="input-cause-income">
+                <button onclick="finallyOperationIncome()">Pronto</button>
             </div>
 
             <div class="divExpense divTransfer">
-                <input type="number" placeholder="Valor">
-                <input type="text" placeholder="Causa da Saida">
-                <button>Pronto</button>
+                <input type="text" placeholder="Valor" id="input-expense">
+                <input type="text" placeholder="Causa da Saida" id="input-cause-expense">
+                <button onclick="finallyOperationExpense()">Pronto</button>
             </div>
         </main>
         
