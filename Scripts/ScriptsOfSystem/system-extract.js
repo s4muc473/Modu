@@ -55,12 +55,19 @@ window.addEventListener("load",function(){
 });
 
 // F: salvando movimentação
-function saveMoviment() {
+function saveMoviment(tipo,fundo,motivo,valor) {
+    // cards.unshift({
+    //     tipo: localStorage.tipo,
+    //     fundo: nameOfFund.textContent,
+    //     motivo: inputMotivo.value,
+    //     valor: Number(inputValor.value),
+    //     data: dataFormatadaFinal,
+    // });
     cards.unshift({
-        tipo: localStorage.tipo,
-        fundo: nameOfFund.textContent,
-        motivo: inputMotivo.value,
-        valor: Number(inputValor.value),
+        tipo: tipo,
+        fundo: fundo,
+        motivo: motivo,
+        valor: valor,
         data: dataFormatadaFinal,
     });
     localStorage.setItem("cards", JSON.stringify(cards));

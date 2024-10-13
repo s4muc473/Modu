@@ -209,13 +209,13 @@ btnDeposito.addEventListener('click', () => {
 
         removeFund(fund);
         newFund("use");
-        dataCalculation("prohibited");
+        // dataCalculation("prohibited");
 
         let tipo = "#E3B505";
         localStorage.tipo = tipo;
 
-        
-        saveMoviment();
+        saveMoviment(localStorage.tipo,nameOfFund.textContent,inputMotivo.value,Number(inputValor.value));
+        // saveMoviment();
         
         inputValor.value = "";
         inputMotivo.value = "";
@@ -233,14 +233,14 @@ btnRetirada.addEventListener('click', () => {
     
         removeFund(fund);
         newFund("use");
-        dataCalculation("exit");
+        // dataCalculation("exit");
 
         let tipo = "#dadacfc7";
         localStorage.tipo = tipo;
 
         
-        saveMoviment();
-
+        saveMoviment(localStorage.tipo,nameOfFund.textContent,inputMotivo.value,Number(inputValor.value));
+        // saveMoviment();
         inputValor.value = "";
         inputMotivo.value = "";
     }

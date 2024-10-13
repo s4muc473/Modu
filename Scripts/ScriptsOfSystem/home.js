@@ -28,29 +28,49 @@ function expense() {
 }
 
 function finallyOperationIncome() {
-    elementsDOM.divIncome().style.display = "none";
-
     let value = Number(elementsDOM.inputIncomeValue().value);
-    let cause = elementsDOM.inputIncomeCause().innerHTML;
+    let cause = elementsDOM.inputIncomeCause().value;
 
-    saldo += value;
-    localStorage.saldo = saldo;
-    elementsDOM.saldoDOM().textContent = parseFloat(saldo).toFixed(2);
+    if (!value) {
+        alert("informe o valor")
+    } else {
+        elementsDOM.divIncome().style.display = "none";
 
-    hideLoading()
+
+        saldo += value;
+        localStorage.saldo = saldo;
+        elementsDOM.saldoDOM().textContent = parseFloat(saldo).toFixed(2);
+
+        saveMoviment("#E3B505","Saldo",cause,value);
+
+        hideLoading()
+    }
 }
 
 function finallyOperationExpense() {
-    elementsDOM.divExpense().style.display = "none";
+    if (!value) {
+        alert("informe o valor")
+    } else {
+        elementsDOM.divExpense().style.display = "none";
+    
+        let value = Number(elementsDOM.inputExpenseValue().value)
+        let cause = elementsDOM.inputExpenseCause().value;
+    
+        saldo -= value;
+        localStorage.saldo = saldo;
+        elementsDOM.saldoDOM().textContent = parseFloat(saldo).toFixed(2);
+    
+        saveMoviment("#dadacfc7","Saldo",cause,value);
+    
+        hideLoading()
+    }
+}
 
-    let value = Number(elementsDOM.inputExpenseValue().value)
-    let cause = elementsDOM.inputExpenseCause().innerHTML;
-
-    saldo -= value;
-    localStorage.saldo = saldo;
-    elementsDOM.saldoDOM().textContent = parseFloat(saldo).toFixed(2);
-
-    hideLoading()
+function distFunds() {
+    alert("Função em Desenvolvimento");
+    // Listar fundos em uma pagina
+    // Configurar a sua taxa
+    // fazer entrada
 }
 
 const elementsDOM =  {

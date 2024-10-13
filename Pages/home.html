@@ -34,7 +34,7 @@
                 <p>Saldo</p>
                 <h1><p style="display: inline-block;font-size: 20px;">R$</p> <p style="display: inline-block;" id="saldo"></p></h1>
                 <div>
-                    <button>Distribuição em Metas</button>
+                    <button onclick="distFunds()">Distribuição em Metas</button>
                 </div>
             </div>
             
@@ -43,6 +43,8 @@
                 <button onclick="expense()"><i class="fa-solid fa-arrow-trend-down"></i></button>
                 <button onclick="acessExtracts()"><i class="fa-solid fa-money-bill-transfer"></i></button>
                 <button onclick="acessFunds()"><i class="fa-solid fa-sack-dollar"></i></button>
+                <button onclick="acessDivide()"><i class="fa-solid fa-ticket"></i></button>
+                <button onclick="acessReceive()"><i class="fa-solid fa-comments-dollar"></i></button>
             </div>
 
             <div class="boxOfStatistics">
@@ -68,6 +70,8 @@
         <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
         <script src="/firebase-init.js"></script>
         <script src="/Scripts/ScriptsOfLogin/loading.js"></script>
+        <script src="/Scripts/ScriptsOfSystem/system-date.js"></script>
+        <script src="/Scripts/ScriptsOfSystem/system-extract.js"></script>
         <script src="/Scripts/ScriptsOfSystem/home.js"></script>
         <script src="/Scripts/ScriptsOfSystem/system-user.js"></script>
     
