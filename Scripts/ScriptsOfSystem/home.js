@@ -17,6 +17,15 @@ function acessFunds() {
     window.location.href = "/Pages/funds.html";
 }
 
+function acessDivide() {
+    alert("função em desenvolvimento");
+}
+
+function acessReceive() {
+    alert("função em desenvolvimento");
+}
+
+
 function income() {
     showScreenBlack();
     elementsDOM.divIncome().style.display = "block";
@@ -43,18 +52,19 @@ function finallyOperationIncome() {
 
         saveMoviment("#E3B505","Saldo",cause,value);
 
-        hideLoading()
+        hideLoading();
     }
 }
 
 function finallyOperationExpense() {
+    let value = Number(elementsDOM.inputExpenseValue().value)
+    let cause = elementsDOM.inputExpenseCause().value;
+
     if (!value) {
         alert("informe o valor")
     } else {
         elementsDOM.divExpense().style.display = "none";
     
-        let value = Number(elementsDOM.inputExpenseValue().value)
-        let cause = elementsDOM.inputExpenseCause().value;
     
         saldo -= value;
         localStorage.saldo = saldo;
@@ -62,7 +72,7 @@ function finallyOperationExpense() {
     
         saveMoviment("#dadacfc7","Saldo",cause,value);
     
-        hideLoading()
+        hideLoading();
     }
 }
 
