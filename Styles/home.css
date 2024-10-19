@@ -95,6 +95,12 @@ main {
     transition: 0.5s ease-in-out;
 }
 
+.divTransfer a {
+    color: var(--color-main);
+    padding-left: 1%;
+    font-size: large;
+}
+
 .divTransfer input {
     width: 100%;
     margin-top: 1vh;

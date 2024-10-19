@@ -36,6 +36,16 @@ function expense() {
     elementsDOM.divExpense().style.display = "block";
 }
 
+function closeIncome() {
+    elementsDOM.divIncome().style.display = "none"; // TECH DEBT
+    hideLoading();
+}
+
+function closeExpense() {
+    elementsDOM.divExpense().style.display = "none"; // TECH DEBT
+    hideLoading();
+}
+
 function finallyOperationIncome() {
     let value = Number(elementsDOM.inputIncomeValue().value);
     let cause = elementsDOM.inputIncomeCause().value;
@@ -87,6 +97,8 @@ const elementsDOM =  {
     saldoDOM: () => document.querySelector('#saldo'),
     divIncome: () => document.querySelector('.divIncome'),
     divExpense: () => document.querySelector('.divExpense'),
+    btnClseExpense: () => document.querySelector("#btn-close-expense"),
+    btnClseIncome: () => document.querySelector("#btn-close-income"),
     inputIncomeValue: () => document.querySelector('#input-income'),
     inputIncomeCause: () => document.querySelector('#input-cause-income'),
     inputExpenseValue: () => document.querySelector('#input-expense'),
