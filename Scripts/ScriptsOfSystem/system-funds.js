@@ -7,7 +7,7 @@ const btnRetirada = document.querySelector("#btn-retirar");
 const btnVoltar = document.querySelector("#btn-voltar");
 const btnDeletarFundo = document.querySelector("#btn-delete-fund");
 
-// Chaves de acesso do localDtorage
+// Chaves de acesso do localStorage
 const localStorageFundsKey = "funds";
 const localStorageFunds = JSON.parse(localStorage.getItem(localStorageFundsKey) || "[]");
 
