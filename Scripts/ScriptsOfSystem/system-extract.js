@@ -56,13 +56,6 @@ window.addEventListener("load",function(){
 
 // F: salvando movimentação
 function saveMoviment(tipo,fundo,motivo,valor) {
-    // cards.unshift({
-    //     tipo: localStorage.tipo,
-    //     fundo: nameOfFund.textContent,
-    //     motivo: inputMotivo.value,
-    //     valor: Number(inputValor.value),
-    //     data: dataFormatadaFinal,
-    // });
     cards.unshift({
         tipo: tipo,
         fundo: fundo,
@@ -78,6 +71,13 @@ function deleteExtracts() {
     location.reload();
 }
 
+// function removeExtract(motivo) {
+//     let index = cards.findIndex(x => x.motivo == motivo);
+//     cards.splice(index, 1);
+//     localStorage.setItem(localStorage.cards, JSON.stringify(cards));
+//     showMoviment();
+// };
+
 // Carregando movimentação no historico
 function showMoviment() {
     if (cards == '' || cards == 'undefined') {
@@ -91,6 +91,7 @@ function showMoviment() {
             let valor = document.createElement('p');
             let motivo = document.createElement('p');
             let data = document.createElement('p');
+            let btnDelete = document.createElement('button');
     
             content.setAttribute('class','content');
             content.style.backgroundColor = cards[iterador]['tipo'];
@@ -100,6 +101,11 @@ function showMoviment() {
     
             data.setAttribute('id','dateOfMoviment')
             data.textContent = cards[iterador]['data'];
+
+            btnDelete.innerHTML = 'X';
+            btnDelete.addEventListener('click',()=>{
+                removeExtract(cards[iterador]['motivo']);
+            })
     
             valorBox.textContent = "R$ ";
             valor.setAttribute('id','valorOfMoviment');
@@ -111,6 +117,7 @@ function showMoviment() {
             sectionHistory.appendChild(content);
             content.appendChild(nameAndDateBox);
             nameAndDateBox.appendChild(nameFund);
+            // data.appendChild(btnDelete);
             nameAndDateBox.appendChild(data);
             content.appendChild(valorBox);
             valorBox.appendChild(valor);

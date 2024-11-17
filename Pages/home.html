@@ -1,93 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/Styles/global.css">
-        <link rel="stylesheet" href="/Styles/home.css">
-        <script src="https://kit.fontawesome.com/2ec87f2ee1.js" crossorigin="anonymous"></script>
-        <link rel="apple-touch-icon" sizes="180x180" href="/Styles/Favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/Styles/Favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/Styles/Favicon/favicon-16x16.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/Styles/Favicon/android-chrome-192x192.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/Styles/Favicon/android-chrome-512x512.png">
-        <title>Modu Home</title>
-    </head>
 
-    <body>
-        <header>
-            <nav class="navbar">
-                <a href="/Pages/home.html">
-                    <i class="fa-solid fa-house"></i>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Styles/global.css">
+    <link rel="stylesheet" href="/Styles/home.css">
+    <script src="https://kit.fontawesome.com/2ec87f2ee1.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/Styles/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Styles/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Styles/Favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Styles/Favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Styles/Favicon/android-chrome-512x512.png">
+    <title>Modu Home</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/Pages/home.html">
+                <i class="fa-solid fa-house"></i>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="boxOfSaldo">
+            <p>Saldo</p>
+            <h1>
+                <p style="display: inline-block;font-size: 20px;">R$</p>
+                <p style="display: inline-block;" id="saldo"></p>
+            </h1>
+            <div>
+                <button onclick="distFunds()">Distribuição</button>
+            </div>
+        </div>
+
+        <div class="boxOfButtons">
+            <button onclick="income()"><i class="fa-solid fa-arrow-trend-up"></i></button>
+            <button onclick="expense()"><i class="fa-solid fa-arrow-trend-down"></i></button>
+            <button onclick="acessExtracts()"><i class="fa-solid fa-money-bill-transfer"></i></button>
+            <button onclick="acessFunds()"><i class="fa-solid fa-sack-dollar"></i></button>
+            <button onclick="acessDivide()"><i class="fa-solid fa-ticket"></i></button>
+            <button onclick="acessReceive()"><i class="fa-solid fa-comments-dollar"></i></button>
+        </div>
+
+        <div class="boxOfStatistics">
+            Estastisticas em Breve aqui!. <br> [Modu Projects]
+        </div>
+
+        <div class="divIncome divTransfer">
+            <nav>
+                <a id="btn-close-income" onclick="closeIncome()">
+                    <i class="fa-solid fa-arrow-left"></i>
                 </a>
-    
-                <ul>
-                    <a onclick="logout()">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </ul>
             </nav>
-        </header>
+            <input type="text" placeholder="Valor" id="input-income">
+            <input type="text" placeholder="Causa da Entrada" id="input-cause-income">
+            <button onclick="finallyOperationIncome()">Pronto</button>
+        </div>
 
-        <main>
-            <div class="boxOfSaldo">
-                <p>Saldo</p>
-                <h1><p style="display: inline-block;font-size: 20px;">R$</p> <p style="display: inline-block;" id="saldo"></p></h1>
-                <div>
-                    <button onclick="distFunds()">Distribuição em Metas</button>
-                </div>
-            </div>
-            
-            <div class="boxOfButtons">
-                <button onclick="income()"><i class="fa-solid fa-arrow-trend-up"></i></button>
-                <button onclick="expense()"><i class="fa-solid fa-arrow-trend-down"></i></button>
-                <button onclick="acessExtracts()"><i class="fa-solid fa-money-bill-transfer"></i></button>
-                <button onclick="acessFunds()"><i class="fa-solid fa-sack-dollar"></i></button>
-                <button onclick="acessDivide()"><i class="fa-solid fa-ticket"></i></button>
-                <button onclick="acessReceive()"><i class="fa-solid fa-comments-dollar"></i></button>
-            </div>
+        <div class="divExpense divTransfer">
+            <nav>
+                <a id="btn-close-expense" onclick="closeExpense()">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+            </nav>
+            <input type="text" placeholder="Valor" id="input-expense">
+            <input type="text" placeholder="Causa da Saida" id="input-cause-expense">
+            <button onclick="finallyOperationExpense()">Pronto</button>
+        </div>
+    </main>
 
-            <div class="boxOfStatistics">
-                Estastisticas em Breve aqui!. <br> [Modu Projects]
-            </div>
 
-            <div class="divIncome divTransfer">
-                <nav>
-                    <a id="btn-close-income" onclick="closeIncome()">
-                        <i class="fa-solid fa-arrow-left"></i>
-                    </a>
-                </nav>
-                <input type="text" placeholder="Valor" id="input-income">
-                <input type="text" placeholder="Causa da Entrada" id="input-cause-income">
-                <button onclick="finallyOperationIncome()">Pronto</button>
-            </div>
+    <script src="/Scripts/ScriptsOfSystem/system-date.js"></script>
+    <script src="/Scripts/ScriptsOfSystem/system-extract.js"></script>
+    <script src="/Scripts/ScriptsOfSystem/home.js"></script>
+    <script src="/Scripts/ScriptsOfSystem/system-user.js"></script>
 
-            <div class="divExpense divTransfer">
-                <nav>
-                    <a id="btn-close-expense" onclick="closeExpense()">
-                        <i class="fa-solid fa-arrow-left"></i>
-                    </a>
-                </nav>
-                <input type="text" placeholder="Valor" id="input-expense">
-                <input type="text" placeholder="Causa da Saida" id="input-cause-expense">
-                <button onclick="finallyOperationExpense()">Pronto</button>
-            </div>
-        </main>
-        
-
-        
-        <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
-        <script src="/firebase-init.js"></script>
-        <script src="/Scripts/ScriptsOfLogin/loading.js"></script>
-        <script src="/Scripts/ScriptsOfSystem/system-date.js"></script>
-        <script src="/Scripts/ScriptsOfSystem/system-extract.js"></script>
-        <script src="/Scripts/ScriptsOfSystem/home.js"></script>
-        <script src="/Scripts/ScriptsOfSystem/system-user.js"></script>
-
-        <script src="/Scripts/main.js"></script>
-    
-    </body>
+    <script src="/Scripts/main.js"></script>
+</body>
 
 
 </html>

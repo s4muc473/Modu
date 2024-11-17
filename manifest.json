@@ -1,0 +1,20 @@
+{
+    "name": "Modu Bank",
+    "short_name": "Modu",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#FFFFFF",
+    "icons": [
+    {
+        "src": "/template/icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    },
+    {
+        "src": "/template/icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }
+    ]
+}
