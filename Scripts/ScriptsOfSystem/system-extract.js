@@ -1,52 +1,3 @@
-// SISTEMA DE MOVIMENTAÇÕES
-const boxOfProhibited = document.querySelector("#box-of-prohibited");
-const boxOfExit = document.querySelector("#box-of-exit");
-const boxOfBalance = document.querySelector("#box-of-balance");
-
-let financeOfDates = {
-    prohibited: 0,
-    balance: 0,
-    exit: 0,
-}
-
-localDate = JSON.parse(localStorage.getItem("financeOfDates") || JSON.stringify(financeOfDates));
-
-function showFinanceDates() {
-    boxOfBalance.innerHTML = `R$ ${localDate.balance},00`;
-    boxOfProhibited.innerHTML = `R$ ${localDate.prohibited},00`;
-    boxOfExit.innerHTML = `R$ ${localDate.exit},00`;
-}
-
-function dataCalculation(type) {
-    let prohibited = localDate.prohibited;
-    let balance = localDate.balance;
-    let exit = localDate.exit;
-
-    let valor = inputValor.value;
-
-    if (type == "prohibited") {
-        prohibited += Number(valor);
-        console.log(prohibited)
-        balance = prohibited - exit;
-
-        localDate.prohibited = prohibited;
-        localDate.balance = balance;
-
-    } else if (type == "exit") {
-        exit += Number(valor);
-        balance = prohibited - exit;
-
-        localDate.exit = exit;
-        localDate.balance = balance;
-    }
-    localStorage.setItem("financeOfDates",JSON.stringify(localDate))
-
-    boxOfBalance.innerHTML = `R$ ${balance},00`;
-    boxOfProhibited.innerHTML = `R$ ${prohibited},00`;
-    boxOfExit.innerHTML = `R$ ${exit},00`;
-}
-
-
 // Acessando cards de movimento na localStorage
 let cards = JSON.parse(localStorage.getItem("cards") || "[]");
 
@@ -57,6 +8,7 @@ window.addEventListener("load",function(){
 // F: salvando movimentação
 function saveMoviment(tipo,fundo,motivo,valor) {
     cards.unshift({
+        id: Date.now(),
         tipo: tipo,
         fundo: fundo,
         motivo: motivo,
@@ -66,17 +18,18 @@ function saveMoviment(tipo,fundo,motivo,valor) {
     localStorage.setItem("cards", JSON.stringify(cards));
 }
 
+function removeExtract(id) {
+    let index = cards.findIndex(x => x.id == id);
+    cards.splice(index, 1);
+    localStorage.setItem("cards", JSON.stringify(cards));
+    location.reload();
+};
+
 function deleteExtracts() {
     localStorage.cards = [];
     location.reload();
 }
 
-// function removeExtract(motivo) {
-//     let index = cards.findIndex(x => x.motivo == motivo);
-//     cards.splice(index, 1);
-//     localStorage.setItem(localStorage.cards, JSON.stringify(cards));
-//     showMoviment();
-// };
 
 // Carregando movimentação no historico
 function showMoviment() {
@@ -104,7 +57,7 @@ function showMoviment() {
 
             btnDelete.innerHTML = 'X';
             btnDelete.addEventListener('click',()=>{
-                removeExtract(cards[iterador]['motivo']);
+                removeExtract(cards[iterador]['id']);
             })
     
             valorBox.textContent = "R$ ";
@@ -117,7 +70,7 @@ function showMoviment() {
             sectionHistory.appendChild(content);
             content.appendChild(nameAndDateBox);
             nameAndDateBox.appendChild(nameFund);
-            // data.appendChild(btnDelete);
+            data.appendChild(btnDelete);
             nameAndDateBox.appendChild(data);
             content.appendChild(valorBox);
             valorBox.appendChild(valor);
